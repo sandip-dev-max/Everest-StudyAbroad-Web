@@ -1,0 +1,5 @@
+import type { MetadataRoute } from 'next';
+import { site } from '@/lib/site';
+import { destinations } from '@/data/destinations';
+import { courses, universities } from '@/data/catalog';
+export default function sitemap(): MetadataRoute.Sitemap { const now=new Date(); const base=[['',1],['/about',.7],['/services',.7],['/contact',.8],['/courses',.9],['/universities',.9],['/destinations',.9],['/privacy-policy',.3],['/terms-conditions',.3],['/cookie-policy',.3]] as const; return [...base.map(([path,priority])=>({url:`${site.siteUrl}${path}`,lastModified:now,changeFrequency:'weekly' as const,priority})),...destinations.map(d=>({url:`${site.siteUrl}/destinations/${d.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.8})),...universities.map(u=>({url:`${site.siteUrl}/universities/${u.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.7})),...courses.map(c=>({url:`${site.siteUrl}/courses/${c.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.6}))]; }
