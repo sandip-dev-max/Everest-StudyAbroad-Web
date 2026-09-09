@@ -72,7 +72,20 @@ npm run build
 npm start
 ```
 
-For a hosted deployment, use a Node-compatible platform such as Vercel or another service that supports Next.js App Router applications. Add `NEXT_PUBLIC_SITE_URL` to the platform's production environment variables before building.
+### Deploy to Vercel
+
+1. Import `sandip-dev-max/Everest-StudyAbroad-Web` into Vercel.
+2. Keep the detected framework as **Next.js** and the default build settings.
+3. Add `NEXT_PUBLIC_SITE_URL` in Vercel under **Settings > Environment Variables** for Preview and Production. Use the final custom domain for Production, for example:
+
+	```env
+	NEXT_PUBLIC_SITE_URL=https://www.example.com
+	```
+
+4. Deploy. Vercel automatically provides `VERCEL_URL` for preview deployments, so preview canonical URLs, Open Graph URLs, sitemap URLs and robots URLs remain valid before the production domain is configured.
+5. After connecting the custom domain, redeploy Production so the canonical URL and sitemap use that domain.
+
+Vercel detects the Next.js app automatically; no `vercel.json` file or custom server is required.
 
 ## Key routes
 

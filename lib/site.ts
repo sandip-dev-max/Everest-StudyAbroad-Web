@@ -10,5 +10,7 @@ export const site = {
   hours: 'Sun – Fri · 9:30 am – 6:30 pm',
   instagram: 'https://www.instagram.com/everestglobalnetwork/',
   facebook: 'https://www.facebook.com/everestglobalnetwork/',
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
 };
