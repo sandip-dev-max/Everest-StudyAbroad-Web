@@ -168,7 +168,7 @@ export default function Home() {
               {/* ======================================================
                   RIGHT VISUAL
               ====================================================== */}
-              <div className="relative min-h-[500px] overflow-hidden lg:min-h-[680px]">
+              <div className="relative min-h-[340px] overflow-hidden sm:min-h-[500px] lg:min-h-[680px]">
                 {/* Orbital circles */}
                 <div className="absolute left-[55%] top-[48%] h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087FC1]/10 sm:h-[540px] sm:w-[540px]" />
 
@@ -270,7 +270,7 @@ export default function Home() {
                   <img
                     src="/assets/hero-student-girl.png"
                     alt="Student planning to study abroad"
-                    className="relative z-10 h-[128%] w-[128%] translate-y-[9%] object-contain object-center drop-shadow-[0_30px_35px_rgba(7,26,53,.18)] lg:h-[145%] lg:w-[145%]"
+                    className="relative z-10 h-auto w-full max-w-[520px] object-contain object-center drop-shadow-[0_30px_35px_rgba(7,26,53,.18)] sm:h-[128%] sm:w-[128%] sm:translate-y-[9%] lg:h-[145%] lg:w-[145%]"
                   />
 
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 h-24 bg-gradient-to-t from-[#F4F8FC] via-[#F4F8FC]/55 to-transparent" />
