@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "./brand.css";
+@import "./atmosphere.css";
 
 :root{--ink:#0B1B3A;--muted:#5F6F85;--paper:#F7F9FC;--blue:#087FC1;--red:#ED1C24;--deep:#061225;--line:#E5EAF0;--muted-light:#8B98AA}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Poppins',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}::selection{background:#D8EAF4;color:var(--ink)}

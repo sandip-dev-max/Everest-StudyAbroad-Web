@@ -1,0 +1,39 @@
+.page-atmosphere,
+main > section:first-of-type,
+main > div:first-child {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(7, 26, 53, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 26, 53, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.95), transparent 34%),
+    radial-gradient(circle at 100% 0, rgba(88, 196, 237, 0.1), transparent 36%);
+  background-size: 60px 60px, 60px 60px, auto, auto;
+}
+
+.page-atmosphere::after,
+main > section:first-of-type::after,
+main > div:first-child::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 18%;
+  right: 9%;
+  width: 140px;
+  height: 96px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: -250px 210px 0 -16px rgba(255, 255, 255, 0.7),
+    -590px 300px 0 -30px rgba(255, 255, 255, 0.62),
+    -90px 350px 0 -28px rgba(255, 255, 255, 0.56);
+  transform: rotate(6deg);
+  filter: drop-shadow(0 18px 32px rgba(7, 26, 53, 0.07));
+}
+
+.page-atmosphere > :first-child,
+main > section:first-of-type > :first-child,
+main > div:first-child > :first-child {
+  position: relative;
+  z-index: 1;
+}
