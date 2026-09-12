@@ -17,10 +17,10 @@ const milestones=[
  ['06','Student Success Focus','Our success is measured by the achievements and satisfaction of the students we help.']
 ];
 const leadership=[
- ['Mr. Bibek Sharma','founder & principal counsellor','Twenty years across UK and AU admissions; ex-British Council.','/assets/founder.png'],
- ['Mr. Ravi Kishan Yadav','head of admissions and chief coordinator','Guiding students through university admissions and helping them make informed academic decisions.','/assets/raviyadav.png'],
- ['Dhiraj Sah','director, north america','Supporting students pursuing higher education opportunities in the USA and Canada.','/assets/dheraj.png'],
- ['Sandy','head of pre-departure','Logistics, housing and pastoral care lead for 600+ students/year.','/assets/sandy.jpeg']
+ ['Mr. Bibek Sharma','Founder & Principal Counsellor','With two decades of experience in UK and Australian admissions, Mr. Bibek Sharma brings extensive expertise in international education counselling, university selection, and student guidance, including experience with the British Council.','/assets/foundernew.png'],
+ ['Mr. Ravi Kishan Yadav','Head of Admissions & Student Coordination','Mr. Ravi Kishan Yadav guides students through the admissions process, from course and university selection to application coordination, helping students make confident and informed academic decisions.','/assets/raviyadav.png'],
+ ['Dhiraj Sah','Director/Manager','Dhiraj Sah specializes in supporting students pursuing higher education in the United States and Canada, providing guidance on university selection, applications, admissions, and the overall study-abroad process.','/assets/dheraj.png'],
+ ['Sandip Bhatta','Technology & Digital Experience Lead','Leading the development and digital transformation of Everest Global Network, with a focus on building modern web platforms, improving digital experiences, and creating technology-driven solutions that make the study-abroad journey simpler and more accessible for students.','/assets/sandynew.png']
 ];
 export default function AboutPage(){return <main id="main-content" className="pt-28">
  <section className="bg-[#f5f7fb] py-20 lg:py-28"><div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-10"><div className="grid gap-12 lg:grid-cols-[1fr_.72fr] lg:items-end"><div><p className="eyebrow">About Everest Global Network</p><h1 className="mt-5 max-w-5xl text-6xl font-semibold leading-[.9] tracking-[-.07em] text-[#0a1733] sm:text-8xl">Empowering students.<br/><span className="font-serif font-normal italic text-[#087FC1]">Building global futures.</span></h1></div><p className="max-w-xl text-base leading-7 text-slate-500">Helping Nepalese students access world-class education through trusted counseling, university admissions, visa assistance, and personalized support.</p></div></div></section>
