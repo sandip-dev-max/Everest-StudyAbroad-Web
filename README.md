@@ -58,7 +58,7 @@ cp .env.example .env.local
 Set `NEXT_PUBLIC_SITE_URL` to the real public domain before deploying:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://your-production-domain.example
+NEXT_PUBLIC_SITE_URL=https://www.everestglobalnetwork.com.np
 ```
 
 This value is used for canonical URLs, Open Graph metadata, structured data, `sitemap.xml` and `robots.txt`. Site contact details, business hours and social links are maintained in [`lib/site.ts`](lib/site.ts).
@@ -76,14 +76,14 @@ npm start
 
 1. Import `sandip-dev-max/Everest-StudyAbroad-Web` into Vercel.
 2. Keep the detected framework as **Next.js** and the default build settings.
-3. Add `NEXT_PUBLIC_SITE_URL` in Vercel under **Settings > Environment Variables** for Preview and Production. Use the final custom domain for Production, for example:
+3. Add `NEXT_PUBLIC_SITE_URL` in Vercel under **Settings > Environment Variables** for Preview and Production:
 
 	```env
-	NEXT_PUBLIC_SITE_URL=https://www.example.com
+	NEXT_PUBLIC_SITE_URL=https://www.everestglobalnetwork.com.np
 	```
 
-4. Deploy. Vercel automatically provides `VERCEL_URL` for preview deployments, so preview canonical URLs, Open Graph URLs, sitemap URLs and robots URLs remain valid before the production domain is configured.
-5. After connecting the custom domain, redeploy Production so the canonical URL and sitemap use that domain.
+4. Deploy. Canonical URLs, Open Graph URLs, sitemap URLs and the robots sitemap reference will use the production domain, including on Preview deployments.
+5. Confirm the custom domain is connected to the Production deployment.
 
 Vercel detects the Next.js app automatically; no `vercel.json` file or custom server is required.
 
