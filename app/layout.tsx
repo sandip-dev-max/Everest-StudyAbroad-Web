@@ -7,17 +7,29 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.siteUrl),
-  title: { default: `${site.name} | Study Abroad Consultancy in Kathmandu`, template: `%s | ${site.name}` },
+  title: {
+    default: 'Study Abroad Consultancy in Kathmandu, Nepal | Everest Global Network',
+    template: `%s | ${site.name}`,
+  },
   description: site.description,
   applicationName: site.name,
-  keywords: ['study abroad consultancy in Kathmandu', 'education consultancy in Tinkune', 'study abroad consultancy Nepal', 'study in Australia from Nepal', 'study in UK from Nepal', 'study in Canada from Nepal', 'Everest Global Network'],
   authors: [{ name: site.name }],
   creator: site.name,
   publisher: site.name,
-  alternates: { canonical: '/' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
-  openGraph: { type: 'website', siteName: site.name, title: `${site.name} | Study Abroad`, description: site.description, images: [{ url: '/assets/hero-student.jpg', width: 1080, height: 1920, alt: 'Student preparing for an international study journey' }] },
-  twitter: { card: 'summary_large_image', title: `${site.name} | Study Abroad`, description: site.description, images: ['/assets/hero-student.jpg'] },
+  openGraph: {
+    type: 'website',
+    siteName: site.name,
+    title: 'Study Abroad Consultancy in Kathmandu, Nepal | Everest Global Network',
+    description: site.description,
+    images: [{ url: '/assets/hero-student.jpg', width: 1080, height: 1920, alt: 'Student preparing to study abroad with Everest Global Network' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study Abroad Consultancy in Kathmandu, Nepal | Everest Global Network',
+    description: site.description,
+    images: ['/assets/hero-student.jpg'],
+  },
   icons: { icon: '/assets/everest-logo.png' },
 };
 
@@ -25,14 +37,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': ['EducationalOrganization', 'LocalBusiness'],
-    '@id': `${site.siteUrl}/#organization`,
+    '@id': new URL('/#organization', site.siteUrl).toString(),
     name: site.name,
     url: site.siteUrl,
     description: site.description,
     email: site.email,
     telephone: site.phone,
-    priceRange: '$$',
-    address: { '@type': 'PostalAddress', streetAddress: 'Tinkune', addressLocality: 'Kathmandu', addressRegion: 'Bagmati', addressCountry: 'NP' },
+    address: { '@type': 'PostalAddress', streetAddress: site.address.split(',')[0], addressLocality: 'Kathmandu', addressRegion: 'Bagmati', addressCountry: 'NP' },
     areaServed: [{ '@type': 'Place', name: 'Tinkune' }, { '@type': 'City', name: 'Kathmandu' }, { '@type': 'Country', name: 'Nepal' }],
     serviceType: ['Study abroad consultancy', 'University application guidance', 'Student visa guidance'],
     openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:30', closes: '18:30' }],

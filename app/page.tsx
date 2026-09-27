@@ -22,9 +22,34 @@ import { FAQ } from "@/components/FAQ";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Study Abroad Consultancy in Kathmandu, Nepal",
+  title: {
+    absolute: "Study Abroad Consultancy in Kathmandu, Nepal | Everest Global Network",
+  },
   description:
-    "Looking for a study abroad consultancy in Kathmandu or Tinkune? Everest Global Network helps Nepalese students with courses, universities, applications and visa guidance.",
+    "Everest Global Network helps students in Kathmandu and across Nepal compare international courses, universities and destinations, with guidance from first search through applications.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    title: "Study Abroad Consultancy in Kathmandu, Nepal | Everest Global Network",
+    description:
+      "Everest Global Network helps students in Kathmandu and across Nepal compare international courses, universities and destinations, with guidance from first search through applications.",
+    url: "/",
+    images: [
+      {
+        url: "/assets/hero-student.jpg",
+        width: 1080,
+        height: 1920,
+        alt: "Student preparing to study abroad with Everest Global Network",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Study Abroad Consultancy in Kathmandu, Nepal | Everest Global Network",
+    description:
+      "Everest Global Network helps students in Kathmandu and across Nepal compare international courses, universities and destinations, with guidance from first search through applications.",
+    images: ["/assets/hero-student.jpg"],
+  },
 };
 
 const universityImage = (name: string) => {
@@ -269,7 +294,7 @@ export default function Home() {
 
                   <img
                     src="/assets/hero-student-girl.png"
-                    alt="Student planning to study abroad"
+                    alt="Student preparing for an international study journey"
                     className="relative z-10 h-auto w-full max-w-[520px] object-contain object-center drop-shadow-[0_30px_35px_rgba(7,26,53,.18)] sm:h-[128%] sm:w-[128%] sm:translate-y-[9%] lg:h-[145%] lg:w-[145%]"
                   />
 
@@ -506,7 +531,7 @@ export default function Home() {
               >
                 <img
                   src={d.image}
-                  alt={d.country}
+                  alt={`Study destination in ${d.country}`}
                   className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
@@ -640,7 +665,7 @@ export default function Home() {
                 <div className="relative h-56 overflow-hidden bg-slate-100">
                   <img
                     src={universityImage(u.name)}
-                    alt={u.name}
+                    alt={`${u.name} in ${u.city}, ${u.country}`}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
 
@@ -716,7 +741,11 @@ export default function Home() {
                   },
                   {
                     q: "Which destinations can I explore?",
-                    a: "Our current catalogue includes Australia, the United Kingdom, Canada, the USA, Germany, New Zealand, Japan and India. Availability varies by course and institution.",
+                    a: "Our catalogue includes Australia, the United Kingdom, Lithuania, Canada, the USA, Germany, New Zealand, Japan and India. Availability varies by course and institution.",
+                  },
+                  {
+                    q: "How can I choose a study abroad consultancy in Kathmandu?",
+                    a: "When comparing the best consultancy in Tinkune or Kathmandu, Nepal, look for clear advice on course and university choices, eligibility, fees and application steps. Everest Global Network is based in Tinkune and helps students across Nepal explore study options in the UK, Lithuania, Europe and other destinations. Admissions and visa decisions are made by universities and government authorities.",
                   },
                   {
                     q: "Can you help with visa preparation?",

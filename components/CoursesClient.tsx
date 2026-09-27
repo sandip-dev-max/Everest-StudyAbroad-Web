@@ -104,7 +104,7 @@ export function CoursesClient() {
             <div className="relative h-40 overflow-hidden">
               <img
                 src={courseImage(c.name, c.faculty, i)}
-                alt={c.name}
+                alt={`${c.name} course programme`}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />

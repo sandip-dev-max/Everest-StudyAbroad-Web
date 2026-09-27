@@ -5,7 +5,7 @@ import { universities, courses } from "@/data/catalog";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const u=universities.find(x=>x.slug===slug);if(!u)return {title:"University not found"};return {title:u.name,description:`Explore ${u.name} in ${u.city}, ${u.country}. Discover programmes and get study abroad guidance from Everest Global Network.`,alternates:{canonical:`${site.siteUrl}/universities/${u.slug}`}}}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const u=universities.find(x=>x.slug===slug);if(!u)return {title:"University not found"};const title=`${u.name} | Study in ${u.country}`;const description=`Explore courses at ${u.name} in ${u.city}, ${u.country}. Find programme details and study abroad guidance from Everest Global Network.`;const url=new URL(`/universities/${u.slug}`,site.siteUrl).toString();const image=universityImage(u.name);return {title,description,alternates:{canonical:url},openGraph:{type:'website',title:`${title} | ${site.name}`,description,url,images:[{url:image,alt:`${u.name} in ${u.city}, ${u.country}`} ]},twitter:{card:'summary_large_image',title:`${title} | ${site.name}`,description,images:[image]}}}
 
 const universityImage = (name: string) => {
   const fileName = name === "Berlin School of Business and Innovation (BSBI)"
@@ -59,7 +59,7 @@ export default async function UniversityDetail({
             <div className="min-h-[420px] overflow-hidden">
               <img
                 src={universityImage(u.name)}
-                alt={u.name}
+                alt={`${u.name} in ${u.city}, ${u.country}`}
                 className="h-full w-full object-cover"
               />
             </div>

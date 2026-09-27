@@ -2,4 +2,40 @@ import type { MetadataRoute } from 'next';
 import { site } from '@/lib/site';
 import { destinations } from '@/data/destinations';
 import { courses, universities } from '@/data/catalog';
-export default function sitemap(): MetadataRoute.Sitemap { const now=new Date(); const base=[['',1],['/about',.7],['/services',.7],['/contact',.8],['/courses',.9],['/universities',.9],['/destinations',.9],['/privacy-policy',.3],['/terms-conditions',.3],['/cookie-policy',.3]] as const; return [...base.map(([path,priority])=>({url:`${site.siteUrl}${path}`,lastModified:now,changeFrequency:'weekly' as const,priority})),...destinations.map(d=>({url:`${site.siteUrl}/destinations/${d.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.8})),...universities.map(u=>({url:`${site.siteUrl}/universities/${u.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.7})),...courses.map(c=>({url:`${site.siteUrl}/courses/${c.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.6}))]; }
+
+const publicPages = [
+	['/', 1],
+	['/about', 0.6],
+	['/services', 0.8],
+	['/contact', 0.7],
+	['/destinations', 0.9],
+	['/universities', 0.9],
+	['/courses', 0.9],
+] as const;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+	const staticEntries = publicPages.map(([path, priority]) => ({
+		url: new URL(path, site.siteUrl).toString(),
+		changeFrequency: 'monthly' as const,
+		priority,
+	}));
+
+	return [
+		...staticEntries,
+		...destinations.map((destination) => ({
+			url: new URL(`/destinations/${destination.slug}`, site.siteUrl).toString(),
+			changeFrequency: 'monthly' as const,
+			priority: 0.8,
+		})),
+		...universities.map((university) => ({
+			url: new URL(`/universities/${university.slug}`, site.siteUrl).toString(),
+			changeFrequency: 'monthly' as const,
+			priority: 0.7,
+		})),
+		...courses.map((course) => ({
+			url: new URL(`/courses/${course.slug}`, site.siteUrl).toString(),
+			changeFrequency: 'monthly' as const,
+			priority: 0.6,
+		})),
+	];
+}
