@@ -9,6 +9,7 @@ const codes: Record<string, string> = {
   uk: "GB",
   usa: "US",
   germany: "DE",
+  lithuania: "LT",
   newzealand: "NZ",
   japan: "JP",
   india: "IN",

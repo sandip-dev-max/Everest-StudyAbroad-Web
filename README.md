@@ -87,6 +87,22 @@ npm start
 
 Vercel detects the Next.js app automatically; no `vercel.json` file or custom server is required.
 
+### Deploy to cPanel / ProtozoaHost
+
+1. Create a ZIP containing the project source, `public/`, `package.json`, `package-lock.json`, `next.config.ts`, and `app.js`. Do not include `node_modules/`, `.next/`, `.git/`, `*.tsbuildinfo`, local `.env` files, or log files.
+2. Upload and extract the ZIP into the Node.js application's application root under `public_html`.
+3. In cPanel **Setup Node.js App**, select Node.js `20.x`, set the application root to that extracted folder, set the startup file to `app.js`, and add `NEXT_PUBLIC_SITE_URL` with the production URL.
+4. Open the cPanel terminal for the application root and run:
+
+	```bash
+	npm ci
+	npm run build
+	```
+
+5. Restart the Node.js application from cPanel. Passenger provides the `PORT` value consumed by `app.js`; do not hard-code a port.
+
+The repository `.gitignore` excludes generated files and local-only files so they are not accidentally added to a deployment archive. `npm start` also runs the same Passenger entrypoint locally for a production smoke test.
+
 ## Key routes
 
 | Route | Purpose |

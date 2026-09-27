@@ -3,6 +3,10 @@ node_modules/
 out/
 dist/
 *.tsbuildinfo
+.cache/
+.vercel/
+.DS_Store
+Thumbs.db
 .env*
 !.env.example
 npm-debug.log*

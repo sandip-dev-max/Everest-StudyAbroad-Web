@@ -85,6 +85,20 @@ export const destinations: Destination[] = [
     image: "/assets/dest-germany.jpg",
   },
   {
+    slug: "lithuania",
+    country: "Lithuania",
+    flag: "🇱🇹",
+    tagline: "Affordable Baltic study with a strong focus on innovation and business.",
+    overview:
+      "Lithuania combines competitive tuition, a growing international student community, and excellent access to STEM, business and technology education in Europe.",
+    tuition: "EUR 2,500 – 7,000 / year",
+    living: "EUR 6,000 – 9,000 / year",
+    workRights: "Up to 20 hrs / week during term",
+    topUnis: ["Vilnius University", "Kaunas University of Technology", "Vytautas Magnus University", "ISM University"],
+    visaNote: "D visa and residence permit support for eligible students enrolled in accredited programmes.",
+    image: "/assets/dest-lithuania.jpg",
+  },
+  {
     slug: "newzealand",
     country: "New Zealand",
     flag: "🇳🇿",
