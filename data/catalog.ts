@@ -208,6 +208,90 @@ courses.push(
   c("bsc-business-economics-vu", "BSc Business Economics", "vilnius-university", "Lithuania", "lithuania", "business-economics", "Undergraduate", "3 years", "EUR 2,800 / year", "September"),
 );
 
+courses.push(
+  c("data-science-msc-coventry", "MSc Data Science", "coventry-university", "United Kingdom", "uk", "computing-it", "Postgraduate", "1 year"),
+  c("mba-coventry", "Master of Business Administration", "coventry-university", "United Kingdom", "uk", "management", "Postgraduate", "1 year"),
+  c("psychology-bsc-coventry", "BSc Psychology", "coventry-university", "United Kingdom", "uk", "psychology", "Undergraduate", "3 years"),
+  c("adult-nursing-bsc-coventry", "BSc Adult Nursing", "coventry-university", "United Kingdom", "uk", "health", "Undergraduate", "3 years"),
+  c("motorsport-engineering-beng-coventry", "BEng Motorsport Engineering", "coventry-university", "United Kingdom", "uk", "engineering", "Undergraduate", "3 years"),
+  c("business-management-greenwich", "BA Business Management", "university-of-greenwich", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("computer-science-greenwich", "BSc Computer Science", "university-of-greenwich", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("cyber-security-greenwich", "BSc Cyber Security", "university-of-greenwich", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("international-business-greenwich", "BA International Business", "university-of-greenwich", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("construction-management-greenwich", "BSc Construction Management", "university-of-greenwich", "United Kingdom", "uk", "engineering", "Undergraduate", "3 years"),
+  c("business-studies-computing-ulster", "Business Studies with Computing BSc (Hons)", "ulster-university", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("computing-technologies-ulster", "Computing Technologies BSc (Hons)", "ulster-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("computing-science-ulster", "Computing Science BSc (Hons)", "ulster-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("software-engineering-ulster", "Software Engineering BSc (Hons)", "ulster-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("artificial-intelligence-msc-ulster", "Artificial Intelligence MSc", "ulster-university", "United Kingdom", "uk", "computing-it", "Postgraduate", "1 year"),
+  c("business-management-dmu", "Business Management BA (Hons)", "de-montfort-university", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("computer-science-dmu", "Computer Science BSc (Hons)", "de-montfort-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("cyber-security-dmu", "Cyber Security BSc (Hons)", "de-montfort-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("international-business-dmu", "International Business BA (Hons)", "de-montfort-university", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("mechanical-engineering-dmu", "Mechanical Engineering BEng (Hons)", "de-montfort-university", "United Kingdom", "uk", "engineering", "Undergraduate", "3 years"),
+  c("business-management-ljmu", "BA (Hons) Business Management", "liverpool-john-moores-university", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("computer-science-ljmu", "BSc (Hons) Computer Science", "liverpool-john-moores-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("cyber-security-ljmu", "BSc (Hons) Cyber Security", "liverpool-john-moores-university", "United Kingdom", "uk", "computing-it", "Undergraduate", "3 years"),
+  c("international-business-ljmu", "BA (Hons) International Business", "liverpool-john-moores-university", "United Kingdom", "uk", "business", "Undergraduate", "3 years"),
+  c("project-management-msc-ljmu", "MSc Project Management", "liverpool-john-moores-university", "United Kingdom", "uk", "management", "Postgraduate", "1 year"),
+  c("computer-science-arkansas-state", "Computer Science", "arkansas-state-university", "USA", "usa", "computing-it", "Undergraduate", "4 years"),
+  c("business-administration-arkansas-state", "Business Administration", "arkansas-state-university", "USA", "usa", "business", "Undergraduate", "4 years"),
+  c("accounting-arkansas-state", "Accounting", "arkansas-state-university", "USA", "usa", "business", "Undergraduate", "4 years"),
+  c("engineering-management-arkansas-state", "Engineering Management", "arkansas-state-university", "USA", "usa", "engineering", "Undergraduate", "4 years"),
+  c("information-systems-arkansas-state", "Information Systems", "arkansas-state-university", "USA", "usa", "computing-it", "Undergraduate", "4 years"),
+  c("business-administration-umsl", "Bachelor of Science in Business Administration", "university-of-missouri-st-louis", "USA", "usa", "business", "Undergraduate", "4 years"),
+  c("information-systems-umsl", "Information Systems", "university-of-missouri-st-louis", "USA", "usa", "computing-it", "Undergraduate", "4 years"),
+  c("accounting-umsl", "Accounting", "university-of-missouri-st-louis", "USA", "usa", "business", "Undergraduate", "4 years"),
+  c("cybersecurity-umsl", "Cybersecurity", "university-of-missouri-st-louis", "USA", "usa", "computing-it", "Undergraduate", "4 years"),
+  c("business-analytics-umsl", "Business Analytics", "university-of-missouri-st-louis", "USA", "usa", "business-economics", "Undergraduate", "4 years"),
+  c("bachelor-business-sihe", "Bachelor of Business", "sihe-sydney-institute-of-higher-education", "Australia", "australia", "business", "Undergraduate", "3 years"),
+  c("bachelor-computer-science-sihe", "Bachelor of Computer Science", "sihe-sydney-institute-of-higher-education", "Australia", "australia", "computing-it", "Undergraduate", "3 years"),
+  c("bachelor-accounting-sihe", "Bachelor of Accounting", "sihe-sydney-institute-of-higher-education", "Australia", "australia", "business", "Undergraduate", "3 years"),
+  c("master-business-sihe", "Master of Business", "sihe-sydney-institute-of-higher-education", "Australia", "australia", "business", "Postgraduate", "2 years"),
+  c("master-data-science-sihe", "Master of Data Science", "sihe-sydney-institute-of-higher-education", "Australia", "australia", "computing-it", "Postgraduate", "2 years"),
+  c("business-administration-algoma", "Business Administration", "algoma-university", "Canada", "canada", "business", "Undergraduate", "4 years"),
+  c("computer-science-business-algoma", "Computer Science and Business", "algoma-university", "Canada", "canada", "computing-it", "Undergraduate", "4 years"),
+  c("psychology-algoma", "Psychology", "algoma-university", "Canada", "canada", "psychology", "Undergraduate", "4 years"),
+  c("environmental-science-algoma", "Environmental Science", "algoma-university", "Canada", "canada", "social-science", "Undergraduate", "4 years"),
+  c("economics-algoma", "Economics", "algoma-university", "Canada", "canada", "business-economics", "Undergraduate", "4 years"),
+  c("mba-canada-west", "Master of Business Administration", "canada-west-university", "Canada", "canada", "management", "Postgraduate", "2 years"),
+  c("business-analytics-canada-west", "Master of Business Analytics", "canada-west-university", "Canada", "canada", "business-economics", "Postgraduate", "2 years"),
+  c("associate-commerce-canada-west", "Associate of Arts in Commerce", "canada-west-university", "Canada", "canada", "business", "Diploma", "2 years"),
+  c("software-engineering-vu", "Software Engineering", "vilnius-university", "Lithuania", "lithuania", "computing-it", "Undergraduate", "4 years"),
+  c("international-business-vu", "International Business", "vilnius-university", "Lithuania", "lithuania", "business", "Undergraduate", "3 years"),
+  c("finance-vu", "Finance", "vilnius-university", "Lithuania", "lithuania", "business", "Undergraduate", "3 years"),
+  c("data-science-msc-vu", "MSc Data Science", "vilnius-university", "Lithuania", "lithuania", "computing-it", "Postgraduate", "2 years"),
+  c("marketing-vu", "Marketing", "vilnius-university", "Lithuania", "lithuania", "business", "Undergraduate", "3 years"),
+);
+
 export const getUniversity = (slug: string) => universities.find((u) => u.slug === slug);
 export const getCourse = (slug: string) => courses.find((course) => course.slug === slug);
 export const getFaculty = (slug: string) => faculties.find((faculty) => faculty.slug === slug);
+
+export const courseMatchesSearch = (course: Course, query: string) => {
+  const ignoredTerms = new Set(["and", "course", "courses", "of", "the", "university", "universities"]);
+  const terms = query
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((term) => term && !ignoredTerms.has(term));
+  if (terms.length === 0) return true;
+
+  const university = getUniversity(course.universitySlug);
+  const faculty = getFaculty(course.faculty);
+  const searchable = [
+    course.name,
+    course.universitySlug,
+    university?.name,
+    university?.country,
+    university?.city,
+    course.destination,
+    course.faculty,
+    faculty?.name,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return terms.every((term) => searchable.includes(term));
+};

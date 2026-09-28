@@ -8,7 +8,7 @@ import {
   MapPin,
   Clock3,
 } from "lucide-react";
-import { courses, faculties } from "@/data/catalog";
+import { courseMatchesSearch, courses, faculties } from "@/data/catalog";
 import { courseImage } from "@/lib/course-image";
 import { DestinationSelect } from "@/components/DestinationSelect";
 export function CoursesClient() {
@@ -27,9 +27,7 @@ export function CoursesClient() {
     () =>
       courses.filter(
         (c) =>
-          `${c.name} ${c.universitySlug} ${c.destination} ${c.faculty}`
-            .toLowerCase()
-            .includes(q.toLowerCase()) &&
+          courseMatchesSearch(c, q) &&
           (faculty === "all" || c.faculty === faculty) &&
           (level === "all" || c.level === level) &&
           (destination === "all" || c.destinationSlug === destination),
